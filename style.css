@@ -28,13 +28,13 @@ a {
 .container {
     display: flex;
     flex-direction: row;
-    height: 100vh;
-    width: 100vw;
+    min-height: max(100vh, 900px);
+    min-width: max(100vw, 1800px);
+    /* border: purple solid 4px; */
 }
 
 .left {
-    height: 100%;
-    flex: 1 0 0;
+    flex: 1;
     background-image: url("./assets/eric-froehling-3fl4xRSOD6k-unsplash.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -42,7 +42,9 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* border: red solid 4px; */
 }
+
 
 .logo h1 {
     color: #FFFFFF;
@@ -70,17 +72,20 @@ a {
     width: 100%
 }
 .right {
-    height: 100%;
-    flex: 2 0 0;
+    min-height: 900px;
+    flex: 2;
     background-color: #8E948D;
     display: flex;
     flex-direction: column;
+    /* border: yellow solid 4px; */
 }
 
 .top,
 .form-container,
 .bottom {
+    min-height: 300px;
     flex: 1;
+    /* border: green solid 4px; */
 }
 
 .form-container {
@@ -104,6 +109,7 @@ a {
 .form-top,
 .form-middle,
 .form-bottom {
+    flex: 1;
     display: flex;
     flex-direction: row;
     column-gap: 48px;
@@ -131,6 +137,8 @@ input {
     height: 52px;
     width: calc(100%);
     padding-left: 14px;
+    border-radius: 4px;
+    box-shadow: 4px 4px 10px 0 rgba(0,0,0,.10);
 }
 
 input:focus {
@@ -143,6 +151,7 @@ input:focus {
     background-color: #466C84;
     padding: 14px 24px;
     font-weight: bold;
+    border-radius: 4px;
 }
 
 .bottom p {
